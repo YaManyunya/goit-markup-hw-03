@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root {
   --primary-brand-color: #4d5ae5;
   --pressed-state-color: #404bbf;
@@ -11,6 +21,20 @@
   --hero-background-color: rgba(46, 47, 66, 0.7);
   --body-background-color: #ffffff;
 }
+
+/*p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}*/
+
+/*img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}*/
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--body-background-color);
@@ -18,16 +42,25 @@ body {
   font-size: 16px;
 }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1158px;
+  outline: 2px solid tomato;
+}
+
 .list {
+  margin: 0;
+  padding: 0;
   list-style: none; /*убирає маркер в списку*/
 }
 .link {
+  margin: 0;
   text-decoration: none;
 }
-/*.header {
-}
-.header-navigation {
-}*/
+
 .header-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -73,8 +106,14 @@ body {
 }
 .main-hero {
   background: var(--dark-color);
+  margin-bottom: 120px;
+}
+.marg-bottom {
+  margin-bottom: 120px;
 }
 .main-hero-title {
+  margin-top: 0;
+  margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -89,6 +128,7 @@ body {
   letter-spacing: 0.04em;
   color: var(--body-background-color);
   background: var(--primary-brand-color);
+  padding: 16px 32px;
 }
 .main-hero-title-button:hover {
   background-color: var(--pressed-state-color);
@@ -97,6 +137,7 @@ body {
   background-color: var(--pressed-state-color);
 }
 .visually-hidden {
+  /*спрятать заголовок*/
   position: absolute;
   width: 1px;
   height: 1px;
@@ -112,7 +153,6 @@ body {
 .btn-list {
   background: var(--light-color);
   border: 1px solid var(--accent-color);
-  border-radius: 4px;
 }
 .main-nav-button {
   font-family: 'Roboto', sans-serif;
@@ -155,6 +195,10 @@ body {
 .footer {
   background: var(--dark-color);
 }
+.footer-pad {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
 .footer-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -164,18 +208,39 @@ body {
   text-transform: uppercase;
   color: var(--primary-brand-color);
 }
+.footer-logo-block {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
 .footer-logo-color {
   color: var(--light-color);
 }
 .footer-text {
+  width: 264px;
+
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 .button-all {
+  display: inline-block; /*делаем текст блоком*/
+  vertical-align: middle; /*по вертикале делаем текст по центру*/
   cursor: pointer;
+  border-radius: 4px;
+  border-color: transparent; /*прозрачная рамка*/
+  min-width: 169px;
 }
+.main-First-section {
+  margin-bottom: 120px;
+}
+
 .main-First-section-title {
+  margin-top: 0;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -183,11 +248,17 @@ body {
   color: var(--dark-color);
 }
 .main-First-section-text {
+  margin: 0 auto;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
+.main-second-section {
+  margin-bottom: 120px;
+}
 .main-second-section-title {
+  margin-top: 0;
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -211,8 +282,11 @@ body {
 }
 .main-third-section {
   background: var(--light-color);
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .main-third-section-title {
+  margin-top: 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -220,11 +294,17 @@ body {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--dark-color);
+  margin-bottom: 72px;
 }
 .main-third-section-list {
   background: var(--body-background-color);
 }
+main-third-section-blok {
+  display: inline-block;
+}
 .main-third-section-list-title {
+  margin-top: 0;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -233,6 +313,8 @@ body {
   color: var(--dark-color);
 }
 .main-third-section-list-text {
+  margin-top: 0;
+  margin-bottom: 0;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
